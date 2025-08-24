@@ -40,13 +40,12 @@ This project implements three distinct quantitative stock-picking strategies for
 ---
 
 ## ## Project Structure
-.
-├── 01_equal_weights.ipynb
-├── 02_value_investing.ipynb
-├── 03_dividend_based_investing.ipynb
-├── app.py
-├── requirements.txt
-└── top_50_indian_stocks.csv
+* `app.py`: The main Streamlit application file.
+* `requirements.txt`: Lists all the Python libraries needed to run the project.
+* `top_50_indian_stocks.csv`: Contains the list of the top 50 NSE stock tickers.
+* `01_equal_weights.ipynb`: Jupyter Notebook for the Equal Weight strategy.
+* `02_value_investing.ipynb`: Jupyter Notebook for the Value Investing strategy.
+* `03_dividend_based_investing.ipynb`: Jupyter Notebook for the Dividend Investing strategy.
 
 ---
 ## ## How to Run Locally
