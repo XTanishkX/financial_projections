@@ -6,7 +6,7 @@
 
 ---
 
-### 🚀 [**Check out the live Streamlit App!**]([https://your-streamlit-app-url.streamlit.app/](https://financialprojections-vaaz4bfg6apw8rznnxzzq8.streamlit.app/))
+### 🚀 [**Check out the live Streamlit App!**]([https://financialprojections-vaaz4bfg6apw8rznnxzzq8.streamlit.app/](https://algorithmic-trading-strategies-indian-stocks.streamlit.app/))
 
 ---
 
