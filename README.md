@@ -1,47 +1,55 @@
 # Algorithmic Trading Strategies for the Indian Stock Market
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
 ![Libraries](https://img.shields.io/badge/Libraries-Pandas%20%7C%20YFinance-green)
-![Data](https://img.shields.io/badge/Data-NSE%20Top%2050-yellow)
-
-This project uses Python to implement and test three different algorithmic trading strategies on the top 50 stocks of the Indian National Stock Exchange (NSE). The scripts fetch live financial data using the `yfinance` library to analyze and select stocks based on predefined rules.
 
 ---
 
-## 📈 Strategies Implemented
-
-This repository contains notebooks for three distinct investment strategies:
-
-### 1. Equal Weight Strategy (`01_equal_weights.ipynb`)
-[cite_start]This strategy invests in the largest companies in the market by splitting capital evenly among them[cite: 1].
-
-* **Logic:**
-    1.  [cite_start]Fetches the market capitalization for the top 50 Indian stocks[cite: 1].
-    2.  Selects the **top 10 largest companies**.
-    3.  Takes a total investment amount as input.
-    4.  [cite_start]Divides the investment equally across the 10 stocks and calculates the number of shares to buy for each[cite: 1].
-
-### 2. Value Investing Strategy (`02_value_investing.ipynb`)
-[cite_start]This strategy aims to find stocks that are potentially undervalued based on their financial health[cite: 2].
-
-* **Logic:**
-    1.  [cite_start]Fetches key valuation metrics like **P/E (Price-to-Earnings)**, **P/B (Price-to-Book)**, and **EV/EBITDA** for each stock[cite: 2].
-    2.  Each stock is ranked on every metric using percentile scores.
-    3.  A final **"Value Score"** is calculated by averaging the ranks.
-    4.  [cite_start]Stocks are sorted by this score to identify the top value opportunities[cite: 2].
-
-### 3. Dividend Investing Strategy (`03_dividend_based_investing.ipynb`)
-This strategy focuses on identifying stocks that provide good, sustainable dividend income.
-
-* **Logic:**
-    1.  Gathers dividend-related data such as **Dividend Yield**, **Payout Ratio**, and **5-Year Average Yield**.
-    2.  Each metric is normalized and then combined into a weighted **"Dividend Score"**.
-    3.  The weights prioritize factors like yield (30%) and sustainability (payout ratio, 20%).
-    4.  Stocks are ranked by this final score to find the best dividend-paying companies.
+### 🚀 [**Check out the live Streamlit App!**]([https://your-streamlit-app-url.streamlit.app/](https://financialprojections-vaaz4bfg6apw8rznnxzzq8.streamlit.app/))
 
 ---
 
-## 🚀 How to Run
+## ## Overview
+
+This project implements three distinct quantitative stock-picking strategies for the top 50 companies on the Indian National Stock Exchange (NSE). The logic, originally developed in Jupyter Notebooks, is now presented as an interactive web application built with Streamlit. The app fetches real-time financial data using the `yfinance` library to provide actionable insights.
+
+## ## Key Features
+
+* **Interactive Dashboard**: A user-friendly interface built with Streamlit to select and run strategies.
+* **Three Unique Strategies**: Implements Equal Weight, Value Investing, and Dividend Investing models.
+* **Real-Time Data**: Fetches the latest stock prices, market cap, and financial ratios directly from Yahoo Finance.
+* **Actionable Output**: Provides clear outputs, such as the number of shares to buy or a ranked list of top stocks.
+
+---
+
+## ## Strategies Implemented
+
+1.  **⚖️ Equal Weight Strategy**:
+    * Identifies the top 10 largest companies by market capitalization.
+    * Calculates the number of shares to buy for each, based on an equal monetary allocation from a user-defined portfolio size.
+
+2.  **💎 Value Investing Strategy**:
+    * Screens all 50 stocks using key valuation metrics (P/E, P/B, EV/EBITDA, etc.).
+    * Ranks stocks based on a composite "Value Score" to find the most undervalued opportunities.
+
+3.  **💰 Dividend Investing Strategy**:
+    * Analyzes stocks based on dividend yield, payout ratio, and historical growth.
+    * Ranks stocks using a weighted "Dividend Score" to identify the top income-generating investments.
+
+---
+
+## ## Project Structure
+.
+├── 01_equal_weights.ipynb
+├── 02_value_investing.ipynb
+├── 03_dividend_based_investing.ipynb
+├── app.py
+├── requirements.txt
+└── top_50_indian_stocks.csv
+
+---
+## ## How to Run Locally
 
 1.  **Clone the Repository**
     ```bash
@@ -49,12 +57,21 @@ This strategy focuses on identifying stocks that provide good, sustainable divid
     cd your-repository-name
     ```
 
-2.  **Install Required Libraries**
+2.  **Install Dependencies**
+    It is recommended to use a virtual environment.
     ```bash
-    pip install pandas numpy yfinance scipy jupyterlab
+    pip install -r requirements.txt
     ```
 
-3.  **Run the Jupyter Notebooks**
+3.  **Run the Streamlit App**
     ```bash
-    jupyter lab
+    streamlit run app.py
     ```
+    Your app will now be running in your web browser. The Jupyter notebooks are also available for a detailed, cell-by-cell breakdown of the logic.
+
+### ### `requirements.txt`
+pandas
+numpy
+yfinance
+scipy
+streamlit
